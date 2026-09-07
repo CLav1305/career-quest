@@ -1,0 +1,1 @@
+// reusable character card component for quiz results page

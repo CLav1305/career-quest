@@ -1,0 +1,1 @@
+// reusable answer component for quiz and myths pages

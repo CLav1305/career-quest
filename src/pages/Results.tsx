@@ -1,0 +1,1 @@
+// character unlcoked - profile with career character description and traits
