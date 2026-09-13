@@ -1,0 +1,30 @@
+{ "characterQuestions": [
+{
+            "question": "What is your preferred work environment?",
+            "options": [
+                "Office",
+                "Remote",
+                "Fieldwork",
+                "Laboratory"
+            ]
+        },
+        {
+            "question": "Which of these activities do you enjoy the most?",
+            "options": [
+                "Solving puzzles",
+                "Helping others",
+                "Building things",
+                "Analysing data"
+            ]
+        },
+        {
+            "question": "What motivates you the most?",
+            "options": [
+                "Recognition and rewards",
+                "Making a difference",
+                "Learning new skills",
+                "Achieving goals"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "mythsQuestions": [
+        {
+            "question": "Do you believe that success is solely determined by luck?",
+            "options": [
+                "Yes",
+                "No"
+            ]
+        },
+        {
+            "question": "Do you think that hard work always leads to success?",
+            "options": [
+                "Yes",
+                "No"
+            ]
+        },
+        {
+            "question": "Do you believe that talent is more important than effort?",
+            "options": [
+                "Yes",
+                "No"
+            ]
+        }
+    ]
+}
