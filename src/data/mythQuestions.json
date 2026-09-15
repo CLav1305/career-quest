@@ -1,24 +1,24 @@
 {
     "mythsQuestions": [
         {
-            "question": "Do you believe that success is solely determined by luck?",
+            "question": "Your starting path determines your final destination?",
             "options": [
-                "Yes",
-                "No"
+                "True",
+                "False"
             ]
         },
         {
-            "question": "Do you think that hard work always leads to success?",
+            "question": "The best players never ask for help?",
             "options": [
-                "Yes",
-                "No"
+                "True",
+                "False"
             ]
         },
         {
-            "question": "Do you believe that talent is more important than effort?",
+            "question": "Choosing an apprenticeship means you'll miss  out on exciting projects?",
             "options": [
-                "Yes",
-                "No"
+                "True",
+                "False"
             ]
         }
     ]

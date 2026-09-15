@@ -1,29 +1,52 @@
 { "characterQuestions": [
-{
-            "question": "What is your preferred work environment?",
+        {
+            "id": 1,
+            "question": "Every team needs different player types. Which one are you?",
             "options": [
-                "Office",
-                "Remote",
-                "Fieldwork",
-                "Laboratory"
+                {"text": "The one checking the guides before the mission starts", "character": "problemSolver"},
+                {"text": "The one wandering off to explore", "character": "explorer"},
+                {"text": "The one upgrading everything", "character": "builder"},
+                {"text": "The one that makes sure no one gets left behind", "character": "connector"}
             ]
         },
         {
-            "question": "Which of these activities do you enjoy the most?",
+            "id": 2,
+            "question": "You've just unlocked unlimited money. Be honest... what disppears first?",
+                "options": [
+                {"text": "The inventory. I'm collecting everything", "character": "problemSolver"},
+                {"text": "The map fog. I'm exploring everything", "character": "explorer"},
+                {"text": "The starter house. I'm building a mansion", "character": "builder"},
+                {"text": "The original storyline. These characters are about to become very dramatic", "character": "connector"}
+                ]
+        },
+        {
+            "id": 3,
+            "question": "You find a legendary artefact that nobody has seen for centuries! Your first thought is...",
             "options": [
-                "Solving puzzles",
-                "Helping others",
-                "Building things",
-                "Analysing data"
+                {"text": "I need to know how this works!", "character": "problemSolver"},
+                {"text": "I wonder what other secrets I can find!", "character": "explorer"},
+                {"text": "Imagine what I can make with this!", "character": "builder"},
+                {"text": "Who else can benefit from this discovery?", "character": "connector"}
             ]
         },
         {
-            "question": "What motivates you the most?",
+            "id": 4,
+            "question": "You've inherited a neglected piece of land. What excites you most?",
             "options": [
-                "Recognition and rewards",
-                "Making a difference",
-                "Learning new skills",
-                "Achieving goals"
+                {"text": "Unlock every secret, challenge and hidden reward", "character": "problemSolver"},
+                {"text": "Explore caves, forests, and places off the beaten path", "character": "explorer"},
+                {"text": "Transform it into something beautiful and thriving", "character": "builder"},
+                {"text": "Get to know the local community and build strong relationships", "character": "connector"}
+            ]
+        },        
+        {
+            "id": 5,
+            "question": "You've reached the final boss battle. The fate of the kingdom rests on you. What's your move?",
+            "options": [
+                {"text": "Study the boss' patterns and uncover its weaknesses", "character": "problemSolver"},
+                {"text": "Explore the area looking for hidden paths", "character": "explorer"},
+                {"text": "Craft a weapon to gain an advantage", "character": "builder"},
+                {"text": "Rally your team and lead everyone into victory", "character": "connector"}
             ]
         }
     ]

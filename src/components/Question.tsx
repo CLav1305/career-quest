@@ -2,6 +2,7 @@
 import type { QuestionProps } from './types/QuestionProps';
 import './styles/questions.css';
 import { characterQuestions } from '../data/characterQuestions.json';
+import { mythQuestions } from '../data/mythQuestions.json';
 
 export function Question({ question, options, onAnswerSelected }: QuestionProps) {
   return (
