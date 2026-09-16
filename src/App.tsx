@@ -1,9 +1,9 @@
-import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import { Start } from './pages/Start'
 import { QuizPage } from './pages/QuizPage'
 import { Myths } from './pages/Myths'
 import { Results } from './pages/Results'
+import './index.css'
 
 function App() {
   return (

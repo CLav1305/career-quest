@@ -1,16 +1,18 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Quiz } from '../components/Quiz'
-import type { QuestionOption } from '../components/types/QuestionProps'
+import type { QuestionCharacterOption } from '../components/types/QuestionCharProps'
 import characterQuestionsData from '../data/characterQuestions.json'
+
 
 type Question = {
   id: number
   question: string
-  options: QuestionOption[]
+  options: QuestionCharacterOption[]
 }
 
 const questions = (characterQuestionsData as { characterQuestions: Question[] }).characterQuestions
+const themes: Array<1 | 2 | 3 | 4 | 5> = [1, 2, 3, 4, 5]
 
 function getTopCharacter(scores: Record<string, number>) {
   return Object.entries(scores).sort((a, b) => b[1] - a[1])[0][0]
@@ -29,7 +31,7 @@ export function QuizPage() {
 
   const currentQuestion = questions[currentQuestionIndex]
 
-  const handleAnswer = (selectedOption: QuestionOption) => {
+  const handleAnswer = (selectedOption: QuestionCharacterOption) => {
     const nextScores = {
       ...scores,
       [selectedOption.character]: (scores[selectedOption.character] ?? 0) + 1,
@@ -63,8 +65,8 @@ export function QuizPage() {
   }
 
   return (
-    <div>
-      <h1>Quiz</h1>
+    <>
+    <h1 className="text-3xl font-bold text-blue-600">Career Quest</h1>
       <p>
         Question {currentQuestionIndex + 1} of {questions.length}
       </p>
@@ -72,8 +74,9 @@ export function QuizPage() {
         question={currentQuestion.question}
         options={currentQuestion.options}
         onAnswerSelected={handleAnswer}
+        theme={themes[currentQuestionIndex]}
       />
-    </div>
+    </>
   )
 }
 
