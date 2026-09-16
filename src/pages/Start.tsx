@@ -1,14 +1,18 @@
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export function Start() {
+  const navigate = useNavigate()
+
   return (
     <>
       <h1>Career Quest</h1>
       <p>
-        <Link to="/quiz">START QUIZ</Link>
+        <button className="rounded-full ..." onClick={() => navigate('/quiz')}>
+          START QUIZ
+        </button>
       </p>
       <p>
-        Discover which career character matches you!
+        Discover your career character!
       </p>
     </>
   )

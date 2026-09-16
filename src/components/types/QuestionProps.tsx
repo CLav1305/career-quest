@@ -1,7 +1,10 @@
+export type QuestionOption = {
+  text: string;
+  character?: string;
+};
+
 export type QuestionProps = {
-id: number;
-category: 'character' | 'myth';
-question: string;
-options: string[];
-onAnswerSelected: (option: string) => void;
+  question: string;
+  options: QuestionOption[];
+  onAnswerSelected: (option: QuestionOption) => void;
 };
