@@ -1,0 +1,28 @@
+{
+    "mythsQuestions": [
+        {
+            "question": "Your starting path determines your final destination",
+            "correctAnswer": false,
+            "options": [
+                { "text": "True", "value": true },
+                { "text": "False", "value": false }
+            ]
+        },
+        {
+            "question": "The best players ask for help",
+            "correctAnswer": true,
+            "options": [
+                { "text": "True", "value": true },
+                { "text": "False", "value": false }
+            ]
+        },
+        {
+            "question": "Choosing an apprenticeship means you'll miss out on exciting projects",
+            "correctAnswer": false,
+            "options": [
+                { "text": "True", "value": true },
+                { "text": "False", "value": false }
+            ]
+        }
+    ]
+}
