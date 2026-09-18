@@ -3,10 +3,15 @@ export type QuestionCharacterOption = {
   character: string;
 };
 
+export type QuizOption = {
+  text: string;
+  value?: boolean;
+  character?: string;
+};
 
 export type QuestionProps = {
   question: string;
-  options: QuestionCharacterOption[];
-  onAnswerSelected: (option: QuestionCharacterOption) => void;
-  theme?: 1 | 2 | 3 | 4 | 5
+  options: QuizOption[];
+  onAnswerSelected: (option: QuizOption) => void;
+  theme?: 1 | 2 | 3 | 4 | 5;
 };

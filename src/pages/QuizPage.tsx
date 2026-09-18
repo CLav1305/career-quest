@@ -1,9 +1,19 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Quiz } from '../components/Quiz'
 import type { QuestionCharacterOption } from '../components/types/QuestionCharProps'
 import characterQuestionsData from '../data/characterQuestions.json'
 
+function shuffleOptions<T>(items: T[]) {
+  const nextItems = [...items]
+
+  for (let index = nextItems.length - 1; index > 0; index -= 1) {
+    const randomIndex = Math.floor(Math.random() * (index + 1))
+    ;[nextItems[index], nextItems[randomIndex]] = [nextItems[randomIndex], nextItems[index]]
+  }
+
+  return nextItems
+}
 
 type Question = {
   id: number
@@ -30,6 +40,10 @@ export function QuizPage() {
   const [answers, setAnswers] = useState<Array<{ question: string; choice: string; character: string }>>([])
 
   const currentQuestion = questions[currentQuestionIndex]
+  const shuffledOptions = useMemo(
+    () => shuffleOptions(currentQuestion?.options ?? []),
+    [currentQuestionIndex],
+  )
 
   const handleAnswer = (selectedOption: QuestionCharacterOption) => {
     const nextScores = {
@@ -53,7 +67,7 @@ export function QuizPage() {
     if (currentQuestionIndex === questions.length - 1) {
       const topCharacter = getTopCharacter(nextScores)
       localStorage.setItem('careerQuestResult', topCharacter)
-      navigate('/myths')
+      navigate('/boss')
       return
     }
 
@@ -65,18 +79,17 @@ export function QuizPage() {
   }
 
   return (
-    <>
-    <h1 className="text-3xl font-bold text-blue-600">Career Quest</h1>
-      <p>
+    <main className="quiz-page">
+      <p className="question-counter">
         Question {currentQuestionIndex + 1} of {questions.length}
       </p>
       <Quiz
         question={currentQuestion.question}
-        options={currentQuestion.options}
+        options={shuffledOptions}
         onAnswerSelected={handleAnswer}
         theme={themes[currentQuestionIndex]}
       />
-    </>
+    </main>
   )
 }
 

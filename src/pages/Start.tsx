@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { Pixel } from '@react-pixel-ui/react'
+import '../styles/start.css'
+
 
 export function Start() {
   const navigate = useNavigate()

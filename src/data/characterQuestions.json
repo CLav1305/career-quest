@@ -11,7 +11,7 @@
         },
         {
             "id": 2,
-            "question": "You've just unlocked unlimited money. Be honest... what disppears first?",
+            "question": "You've just unlocked unlimited money. Be honest... what disappears first?",
                 "options": [
                 {"text": "The inventory. I'm collecting everything", "character": "problemSolver"},
                 {"text": "The map fog. I'm exploring everything", "character": "explorer"},
@@ -41,7 +41,7 @@
         },        
         {
             "id": 5,
-            "question": "You've reached the final boss battle. The fate of the kingdom rests on you. What's your move?",
+            "question": "You reach the final boss battle. The kingdom needs you. What do you do?",
             "options": [
                 {"text": "Study the boss' patterns and uncover its weaknesses", "character": "problemSolver"},
                 {"text": "Explore the area looking for hidden paths", "character": "explorer"},
