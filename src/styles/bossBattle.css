@@ -1,0 +1,78 @@
+.boss-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at top, var(--dark-panel-2) 0%, var(--dark-panel) 40%, #4319b8 100%);
+  padding: 24px;
+}
+
+.boss-card {
+  width: min(640px, 100%);
+  background: rgba(120, 105, 132, 0.9);
+  border: 4px solid var(--pixel-dark);
+  border-radius: 24px;
+  padding: 28px 24px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(20, 25, 59, 0.35);
+}
+
+.boss-label,
+.boss-title,
+.boss-copy,
+.boss-button {
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.boss-label {
+  margin: 0 0 18px;
+  color: rgb(20, 17, 42);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.boss-title {
+  margin: 0 0 12px;
+  color: rgb(20, 17, 42);
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.boss-copy {
+  margin: 0 auto 22px;
+  max-width: 420px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.boss-graphic {
+  position: relative;
+  width: 240px;
+  height: 210px;
+  margin: 0 auto 22px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #342a48 0%, #120d1f 100%);
+  border: 4px solid var(--pixel-dark);
+  box-shadow: 0 0 0 4px var(--pixel-purple), 0 0 0 8px var(--pixel-pink);
+}
+
+.boss-button {
+  border: 3px solid var(--pixel-cream);
+  border-radius: 9999px;
+  background: linear-gradient(135deg, var(--pixel-purple), var(--pixel-red));
+  color: var(--white);
+  font-weight: 800;
+  padding: 14px 26px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 6px 0 #2b0943;
+}
+
+.boss-button:hover {
+  filter: brightness(1.08);
+}
+
+.boss-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #7c2d12;
+}

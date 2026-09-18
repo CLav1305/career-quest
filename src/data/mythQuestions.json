@@ -1,0 +1,28 @@
+{
+    "mythsQuestions": [
+        {
+            "question": "You’re supposed to know your dream job before you even start",
+            "correctAnswer": false,
+            "options": [
+                { "text": "True", "value": true },
+                { "text": "False", "value": false }
+            ]
+        },
+        {
+            "question": "The best players ask for help",
+            "correctAnswer": true,
+            "options": [
+                { "text": "True", "value": true },
+                { "text": "False", "value": false }
+            ]
+        },
+        {
+            "question": "A side quest can still help you reach the final goal.",
+            "correctAnswer": true,
+            "options": [
+                { "text": "True", "value": true },
+                { "text": "False", "value": false }
+            ]
+        }
+    ]
+}
