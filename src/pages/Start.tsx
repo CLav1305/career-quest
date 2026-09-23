@@ -9,16 +9,16 @@ export function Start() {
   return (
     <main className="start-page">
       <div className="start-card">
-        <h1 className="pixelify-sans start-title">Career Quest</h1>
-
-        <p className="pixelify-sans start-subtitle">
+        <h1 className="kongtext start-title">Career Quest</h1>
+        <br />
+        <p className="kongtext">
           Discover your career character!
         </p>
-
+        <br />
         <Pixel size={5}>
           <button
             type="button"
-            className="pixelify-sans start-button"
+            className="kongtext start-button"
             onClick={() => navigate('/quiz')}
           >
             START

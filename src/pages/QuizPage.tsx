@@ -75,12 +75,12 @@ export function QuizPage() {
   }
 
   if (!currentQuestion) {
-    return <p>Loading questions...</p>
+    return <p className="kongtext">Loading questions...</p>
   }
 
   return (
     <main className="quiz-page">
-      <p className="question-counter">
+      <p className="question-counter kongtext">
         Question {currentQuestionIndex + 1} of {questions.length}
       </p>
       <Quiz

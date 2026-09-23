@@ -8,8 +8,8 @@
 
 .boss-card {
   width: min(640px, 100%);
-  background: rgba(120, 105, 132, 0.9);
-  border: 4px solid var(--pixel-dark);
+  background: rgba(120, 105, 132, 0.508);
+  border: 6px solid var(--pixel-dark);
   border-radius: 24px;
   padding: 28px 24px;
   text-align: center;
@@ -20,21 +20,195 @@
 .boss-title,
 .boss-copy,
 .boss-button {
-  font-family: "Pixelify Sans", sans-serif;
+  font-family: "kongtext", sans-serif;
 }
 
 .boss-label {
   margin: 0 0 18px;
   color: rgb(20, 17, 42);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   font-weight: 800;
 }
 
+.monster, 
+.monster-sword span {
+  position:absolute;
+}
+
+.monster-helmet {
+  z-index: 3;
+  top: 25px;
+  left: 72px;
+  width: 143px;
+  height: 116px;
+  background: #362854;
+  border: 12px solid #180b1a;
+  box-shadow: inset 12px 0 #4c3954, inset -10px -8px #1a1124;
+}
+
+.helmet-crest {
+  position: absolute;
+  top: -37px;
+  left: 18px;
+  width: 78px;
+  height: 34px;
+  background: #362854;
+  border: 10px solid #180b1a;
+}
+
+.helmet-brim {
+  position: absolute;
+  top: 43px;
+  right: -55px;
+  width: 68px;
+  height: 29px;
+  background: #362854;
+  border: 10px solid #180b1a;
+  transform: skewX(22deg);
+}
+
+.monster-face {
+  position: absolute;
+  left: 22px;
+  top: 47px;
+  width: 95px;
+  height: 46px;
+  background: #41405f;
+  border-top: 10px solid #535379;
+}
+
+.monster-eye {
+  position: absolute;
+  top: 13px;
+  width: 10px;
+  height: 12px;
+  background: #d9de91;
+  box-shadow: 0 0 0 4px #172d32;
+}
+
+.monster-eye-left {left: 17px;}
+.monster-eye-right {right: 17px;}
+
+.monster-teeth {
+  position: absolute;
+  left: 23px;
+  bottom: -8px;
+  width: 58px;
+  height: 13px;
+  background: repeating-linear-gradient(90deg, #d9dfc4 0 8px, #60766e 8px 13px);
+  border: 4px solid #172d32;
+}
+
+.monster-body {
+  z-index: 2;
+  top: 123px;
+  left: 45px;
+  width: 196px;
+  height: 128px;
+  background: #362854;
+  border: 12px solid #180b1a;
+  box-shadow: inset 14px 0 #4c3d59, inset -14px -8px #19122f;
+}
+
+.shoulder, .monster-shoulder {
+  position: absolute;
+  top: -13px;
+  width: 63px;
+  height: 54px;
+  background: #362854;
+  border: 10px solid #180b1a;
+}
+
+.shoulder-left {left: -47px; transform: skewY(18deg);}
+.shoulder-right {right: -47px; transform: skewY(-18deg);}
+
+.monster-belt{
+  position: absolute;
+  left: -12px;
+  bottom: 24px;
+  width: 196px;
+  height: 18px;
+  background: #271805;
+  border-top: 7px solid #281738;
+  border-bottom: 7px solid #261738;
+}
+
+.monster-arm {
+  position: absolute;
+  top: 44px;
+  width: 35px;
+  height: 80px;
+  background: #240b3b;
+  border: 9px solid #180728;
+}
+
+.monster-arm-left { left: -32px; transform: rotate(12deg);}
+.monster-arm-right { right: -32px; transform: rotate(-12deg);}
+
+.monster-leg, .monster-legs {
+  z-index: 1;
+  top: 235px;
+  left: 74px;
+  width: 135px;
+  height: 67px;
+  background: linear-gradient(90deg, #35204e 0 43%, transparent 43% 57%, #32204e 57%);
+  border-bottom: 15px solid #140c1e;
+}
+
+.monster-boot {
+  bottom: -22px;
+  width:66px;
+  height: 30px;
+  background: #2b1842;
+  border: 9px solid #17112d;
+}
+
+.monster-boot-left { left: -10px; }
+.monster-boot-right, .monster-right { right: -10px; }
+
+.monster-sword {
+z-index: 4;
+position: absolute;
+left: 10px;
+top: 84px;
+width: 55px;
+height: 216px;
+transform: rotate(-11deg);
+}
+
+.sword-blade {
+  top: 0;
+  left: 15px;
+  width: 24px;
+  height: 158px;
+  background: linear-gradient(90deg, #1b186a 0%, #5256b7 50%, #3035bf 100%);
+  border: 7px solid #1c0f33;
+  clip-path: polygon(0 0, 100% 0, 100% 87%, 50% 100%, 0 87%);
+}
+
+.sword-hilt {
+  top: 145px;
+  left: 0;
+  width: 55px;
+  height: 19px;
+  background: rgb(17, 13, 49);
+  border: 7px solid rgb(35, 20, 83);
+}
+
+.sword-grip {
+  top: 164px;
+  left: 19px;
+  width: 18px;
+  height: 48px;
+  background: rgb(12, 9, 35);
+  border: 6px solid rgb(25, 15, 59);
+}
+
 .boss-title {
   margin: 0 0 12px;
-  color: rgb(20, 17, 42);
+  color: rgb(224, 223, 235);
   font-size: clamp(2rem, 5vw, 3rem);
 }
 
@@ -42,30 +216,35 @@
   margin: 0 auto 22px;
   max-width: 420px;
   color: var(--muted);
-  font-size: 1.05rem;
+  font-size: 1.0rem;
 }
 
 .boss-graphic {
   position: relative;
-  width: 240px;
-  height: 210px;
-  margin: 0 auto 22px;
+  width: 300px;
+  height: 320px;
+  margin: 0 auto 25px;
   border-radius: 22px;
-  background: linear-gradient(180deg, #342a48 0%, #120d1f 100%);
+  background: linear-gradient(90deg,rgba(131,58,180,1)0%,rgba(253,29,29,1)50%,rgba(252,176,69,1)100%);
+;
   border: 4px solid var(--pixel-dark);
-  box-shadow: 0 0 0 4px var(--pixel-purple), 0 0 0 8px var(--pixel-pink);
+  box-shadow: 0 0 0 4px var(--pixel-purple), 0 0 0 8px var(--pixel-purple);
+  image-rendering: pixelated;
+  filter: drop-shadow(10px 12px 0 rgba(15,28,32,0.45));
 }
 
 .boss-button {
-  border: 3px solid var(--pixel-cream);
   border-radius: 9999px;
-  background: linear-gradient(135deg, var(--pixel-purple), var(--pixel-red));
+  background: linear-gradient(90deg,rgba(131,58,180,1)0%,rgba(253,29,29,1)50%,rgba(252,176,69,1)100%);
+  border: 3px solid var(--pixel-dark);
   color: var(--white);
   font-weight: 800;
   padding: 14px 26px;
   cursor: pointer;
   font-size: 1rem;
-  box-shadow: 0 6px 0 #2b0943;
+  box-shadow: 0 6px 0 #2d143f;
+  font-family: "Kongtext", sans-serif;
+  transition: transform 0.15s ease, box-shadow 0.15s ease
 }
 
 .boss-button:hover {
@@ -75,4 +254,10 @@
 .boss-button:active {
   transform: translateY(2px);
   box-shadow: 0 2px 0 #7c2d12;
+}
+
+@media (max-width: 500px) {
+  .boss-page {padding: 16px;}
+  .boss-card {padding: 22px 14px 28px;}
+  .boss-graphic {transform: scale(0.80); transform: bottom center; margin-bottom:0;}
 }

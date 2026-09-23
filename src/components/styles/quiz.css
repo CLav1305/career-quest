@@ -48,6 +48,12 @@
   justify-items: center;
   align-items: stretch;
   width: min(100%, 820px);
+  font-family: "Kongtext", sans-serif;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+
+.quiz-options--two {
+grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .quiz-option {
