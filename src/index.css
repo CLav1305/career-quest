@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap");
 
 :root {
   --bg-page: #f5f7fb;
@@ -11,9 +10,10 @@
   --pixel-orange: #f97316;
   --pixel-red: #ef4444;
   --pixel-purple: #7c3aed;
-  --pixel-pink: #f9a8d4;
+  --pixel-baby-pink: #f9a8d4;
+  --pixel-pink: #fc466b;
   --pixel-teal: #4ecdc4;
-  --pixel-blue: #3b82f6;
+  --pixel-blue: #3f5efb;
   --pixel-green: #a7f3d0;
   --pixel-mint: #94d2ae;
   --pixel-sky: #8ecae6;
@@ -48,12 +48,6 @@ body,
 body {
   min-height: 100vh;
   background: linear-gradient(180deg, var(--bg-warm) 0%, var(--bg-page) 100%);
-}
-
-.pixelify-sans {
-  font-family: "Pixelify Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
 }
 
 .result-loading {
@@ -116,5 +110,19 @@ body {
 
 .result-loading h1,
 .result-loading p {
-  font-family: "Pixelify Sans", sans-serif;
+  font-family: "Kongtext", sans-serif;
+}
+
+@font-face {
+  font-family: "Kongtext";
+  src: url("./assets/fonts/kongtext.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.kongtext {
+  font-family: "Kongtext", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }

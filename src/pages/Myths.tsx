@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { Quiz } from '../components/Quiz'
 import mythQuestionsData from '../data/mythQuestions.json'
 import '../styles/myth.css'
+import { Pixel } from '@react-pixel-ui/react'
 
 function shuffleOptions<T>(items: T[]) {
   const nextItems = [...items]
@@ -85,7 +86,7 @@ export function Myths() {
 
   return (
     <div className="myth-page">
-      <h1 className="myth-title">Myth Check</h1>
+      <h1 className="myth-title kongtext">Myth Check</h1>
       <p className="question-counter">
         Question {currentQuestionIndex + 1} of {mythQuestions.length}
       </p>
@@ -96,17 +97,18 @@ export function Myths() {
             {feedback.isCorrect ? '✓' : '✕'}
           </div>
 
-          <h2 className="feedback-title">{feedback.isCorrect ? 'Correct!' : 'Not quite...'}</h2>
-          <p className="feedback-copy">
+          <h2 className="feedback-title kongtext">{feedback.isCorrect ? 'Correct!' : 'Not quite...'}</h2>
+          <p className="feedback-copy kongtext">
             You chose <strong>{feedback.selected}</strong>.
             {feedback.isCorrect
               ? ' That was the right answer.'
               : ` The correct answer was ${feedback.correctAnswer ? 'True' : 'False'}.`}
           </p>
-
-          <button type="button" className="feedback-button" onClick={handleNext}>
+          <Pixel>
+          <button type="button" className="feedback-button kongtext" onClick={handleNext}>
             {currentQuestionIndex === mythQuestions.length - 1 ? 'See Results' : 'Next Question'}
           </button>
+          </Pixel>
         </div>
       ) : (
         <Quiz

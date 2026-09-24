@@ -64,7 +64,7 @@ export function Results() {
           <span className="pixel-loader__segment" />
           <span className="pixel-loader__segment" />
         </div>
-        <p>Matching your final character...</p>
+        <p className="kongtext">Matching your final character...</p>
       </div>
     )
   }

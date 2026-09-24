@@ -59,7 +59,7 @@
 .feedback-button {
   border: 3px solid var(--panel-ink);
   border-radius: 9999px;
-  background: linear-gradient(135deg, var(--pixel-teal), var(--pixel-blue));
+  background: linear-gradient(135deg, var(--pixel-purple), var(--pixel-blue));
   color: var(--white);
   font-family: "Pixelify Sans", sans-serif;
   font-size: 1rem;
