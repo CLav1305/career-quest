@@ -1,5 +1,6 @@
 {
   "name": "career-quest",
+  "homepage": "https://heathmccullough.github.io/career-quest",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,6 +17,7 @@
     "@react-pixel-ui/react": "^2.2.1",
     "@tailwindcss/cli": "^4.3.3",
     "@tailwindcss/vite": "^4.3.3",
+    "gh-pages": "^6.3.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-router-dom": "^7.18.4",
