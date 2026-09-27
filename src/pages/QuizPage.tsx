@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Quiz } from '../components/Quiz'
-import type { QuestionCharacterOption } from '../components/types/QuestionCharProps'
+import type { QuizOption } from '../components/types/QuestionCharProps'
 import characterQuestionsData from '../data/characterQuestions.json'
 
 function shuffleOptions<T>(items: T[]) {
@@ -18,7 +18,7 @@ function shuffleOptions<T>(items: T[]) {
 type Question = {
   id: number
   question: string
-  options: QuestionCharacterOption[]
+  options: QuizOption[]
 }
 
 const questions = (characterQuestionsData as { characterQuestions: Question[] }).characterQuestions
@@ -45,10 +45,12 @@ export function QuizPage() {
     [currentQuestionIndex],
   )
 
-  const handleAnswer = (selectedOption: QuestionCharacterOption) => {
+  const handleAnswer = (selectedOption: QuizOption) => {
+    const characterKey = typeof selectedOption.character === 'string' ? selectedOption.character : 'unknown'
+
     const nextScores = {
       ...scores,
-      [selectedOption.character]: (scores[selectedOption.character] ?? 0) + 1,
+      [characterKey]: (scores[characterKey] ?? 0) + 1,
     }
 
     const nextAnswers = [
@@ -56,7 +58,7 @@ export function QuizPage() {
       {
         question: currentQuestion.question,
         choice: selectedOption.text,
-        character: selectedOption.character,
+        character: typeof selectedOption.character === 'string' ? selectedOption.character : 'unknown',
       },
     ]
 
@@ -81,6 +83,7 @@ export function QuizPage() {
   return (
     <main className="quiz-page">
       <p className="question-counter kongtext">
+      <h2 className="quiz-title-type kongtext">Personality Questions</h2>
         Question {currentQuestionIndex + 1} of {questions.length}
       </p>
       <Quiz

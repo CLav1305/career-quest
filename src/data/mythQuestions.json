@@ -1,7 +1,7 @@
 {
     "mythsQuestions": [
         {
-            "question": "You’re supposed to know your dream job before you even start",
+            "question": "You are supposed to know your dream job before you even start",
             "correctAnswer": false,
             "options": [
                 { "text": "True", "value": true },

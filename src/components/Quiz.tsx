@@ -10,7 +10,7 @@ export function Quiz ({ question, options, onAnswerSelected, theme = 1 }: Questi
       <ul className={`quiz-options ${options.length === 2 ? 'quiz-options--two' : ''}`} id="quiz-options" role="listbox" aria-label="Quiz options">
         {options.map((option) => (
           <li key={`${question}-${option.text}`} className="quiz-option">
-            <Pixel size={5}>
+            <Pixel size={3}>
             <button
               type="button"
               className={`quiz-button quiz-button--theme-${theme}`}

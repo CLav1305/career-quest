@@ -52,7 +52,8 @@ export function Results() {
   if (isLoading) {
     return (
       <div className="result-loading">
-        <div className="pixel-loader">
+        <div className="result-card">
+          <div className="pixel-loader">
           <span className="pixel-loader__segment" />
           <span className="pixel-loader__segment" />
           <span className="pixel-loader__segment" />
@@ -63,8 +64,9 @@ export function Results() {
           <span className="pixel-loader__segment" />
           <span className="pixel-loader__segment" />
           <span className="pixel-loader__segment" />
+          </div>
+          <p className="kongtext">Matching your final character...</p>
         </div>
-        <p className="kongtext">Matching your final character...</p>
       </div>
     )
   }

@@ -8,20 +8,23 @@
   --panel-shadow: #3a2d1d;
   --pixel-gold: #fbbf24;
   --pixel-orange: #f97316;
-  --pixel-red: #ef4444;
-  --pixel-purple: #7c3aed;
-  --pixel-baby-pink: #f9a8d4;
+  --pixel-indigo:#2c365e;
+  --pixel-violet:#2b183d;
+  background-attachment: scroll;
+  /* fallback background color in case the image doesn't cover or fails to load */
+  background-color: var(--pixel-purple);
+  --pixel-purple: #381f8c;
+  --pixel-rosy-pink: #c5979d;
   --pixel-pink: #fc466b;
-  --pixel-teal: #4ecdc4;
+  --pixel-cyan: #4b8f8c;
   --pixel-blue: #3f5efb;
-  --pixel-green: #a7f3d0;
-  --pixel-mint: #94d2ae;
+  --pixel-grape: #484d6d;
   --pixel-sky: #8ecae6;
   --pixel-cream: #fef3c7;
   --panel-text: #2d241b;
   --dark-panel: #0f172a;
   --dark-panel-2: #1e293b;
-  --success: #14532d;
+  --success: #4b8f8c;
   --danger: #7f1d1d;
   --muted: #dbeafe;
   --white: #ffffff;
@@ -30,7 +33,6 @@
   line-height: 1.5;
   font-weight: 400;
   color: var(--panel-ink);
-  background: var(--bg-page);
 }
 
 * {
@@ -43,11 +45,28 @@ body,
   margin: 0;
   min-height: 100%;
   height: 100%;
+  /* allow the body background-image to show through */
+  background: transparent;
+}
+
+/* Ensure main page containers always fill the viewport to prevent background gaps */
+main {
+  min-height: 100vh;
 }
 
 body {
   min-height: 100vh;
-  background: linear-gradient(180deg, var(--bg-warm) 0%, var(--bg-page) 100%);
+  /* Universal background: gradient overlay + uploaded pixel image at /start-bg.png */
+  background-image:
+    linear-gradient(180deg, rgba(43,39,54,0.45), rgba(26,18,38,0.6)),
+    url('/start-bg.png');
+  /* show the full image without cropping; fallback color fills any empty space */
+  background-size: 100%;
+  background-position: center top;
+  /* allow the background to scroll with the document so it covers long pages */
+  background-attachment: scroll;
+  background-repeat: repeat;
+  background-blend-mode: overlay;
 }
 
 .result-loading {
@@ -55,9 +74,20 @@ body {
   display: grid;
   place-items: center;
   text-align: center;
-  padding: 24px;
-  background: radial-gradient(circle at top, var(--dark-panel-2) 0%, var(--dark-panel) 100%);
+  padding: 28px;
   color: var(--pixel-cream);
+}
+
+.result-loading > .result-card {
+  width: min(720px, 94%);
+  padding: 28px 26px;
+  background: linear-gradient(180deg, rgba(15,12,30,0.82), rgba(22,14,40,0.78));
+  border: 6px solid var(--pixel-purple);
+  border-radius: 20px;
+  box-shadow: 0 0 0 6px rgba(124,58,237,0.08), 0 18px 0 rgba(8,6,20,0.6);
+  display: grid;
+  gap: 18px;
+  align-items: center;
 }
 
 .pixel-loader {
@@ -65,19 +95,19 @@ body {
   grid-template-columns: repeat(10, 12px);
   gap: 6px;
   justify-content: center;
-  margin: 0 auto 20px;
+  margin: 0 auto 8px;
   padding: 12px 10px;
-  border: 4px solid var(--pixel-cream);
+  border: 4px solid rgba(255,255,255,0.06);
   border-radius: 10px;
-  background: rgba(15, 23, 42, 0.7);
-  box-shadow: 0 0 0 4px var(--pixel-purple);
+  background: rgba(0,0,0,0.18);
+  box-shadow: 0 6px 0 rgba(20,12,40,0.6), 0 0 18px rgba(124,58,237,0.06) inset;
 }
 
 .pixel-loader__segment {
   width: 12px;
   height: 12px;
-  background: var(--pixel-gold);
-  border: 2px solid #7c1267;
+  background: linear-gradient(180deg, var(--pixel-pink), var(--pixel-purple));
+  border: 2px solid rgba(28,15,50,0.9);
   animation: pixelBlink 0.8s steps(1) infinite;
 }
 
