@@ -88,6 +88,7 @@ export function QuizPage() {
       </p>
       <Quiz
         question={currentQuestion.question}
+        questionImage={(currentQuestion as any).image}
         options={shuffledOptions}
         onAnswerSelected={handleAnswer}
         theme={themes[currentQuestionIndex]}

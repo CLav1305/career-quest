@@ -1,27 +1,37 @@
 { "characterQuestions": [
         {
             "id": 1,
-            "question": "Every team needs different player types. Which one are you?",
+            "question": "You've assembled your team for your quest. Every team needs different player types. Which one are you?",
             "options": [
-                {"text": "The one checking the guides before the mission starts", "character": "problemSolver"},
-                {"text": "The one wandering off to explore", "character": "explorer"},
-                {"text": "The one upgrading everything", "character": "builder"},
-                {"text": "The one that makes sure no one gets left behind", "character": "connector"}
+                {"text": "The one checking the guides before the mission starts", "character": "problemSolver", "image": "/book.png"},
+                {"text": "The one wandering off to explore", "character": "explorer", "image": "/tree.png"},
+                {"text": "The one upgrading everything", "character": "builder", "image": "/hammer.png"},
+                {"text": "The one that makes sure no one gets left behind", "character": "connector", "image": "/heart.png"}
             ]
         },
         {
             "id": 2,
-            "question": "You've just unlocked unlimited money. Be honest... what disappears first?",
-                "options": [
-                {"text": "The inventory. I'm collecting everything", "character": "problemSolver"},
-                {"text": "The map fog. I'm exploring everything", "character": "explorer"},
-                {"text": "The starter house. I'm building a mansion", "character": "builder"},
-                {"text": "The original storyline. These characters are about to become very dramatic", "character": "connector"}
-                ]
-        },
+            "question": "At the start of your adventure, you've inherited a neglected piece of land. What excites you most?", "image":"/house.png",
+            "options": [
+                {"text": "Unlock every secret, challenge and hidden reward", "character": "problemSolver"},
+                {"text": "Explore caves, forests, and places off the beaten path", "character": "explorer"},
+                {"text": "Transform it into something beautiful and thriving", "character": "builder"},
+                {"text": "Get to know the local community and build strong connections", "character": "connector"}
+            ]
+        },     
         {
             "id": 3,
-            "question": "You find a legendary artefact that nobody has seen for centuries! Your first thought is...",
+            "question": "Nice! You've found a cheatcode for unlimited money. Be honest... what disappears first?",
+                "options": [
+                {"text": "The inventory. I'm collecting everything", "character": "problemSolver", "image": "/bag.png"},
+                {"text": "The map fog. I'm exploring everything", "character": "explorer", "image": "/map.png"},
+                {"text": "The starter house. I'm building a mansion", "character": "builder","image": "/house.png"},
+                {"text": "The original storyline. It's about to become very dramatic", "character": "connector","image": "/scroll.png"}
+                ]
+        },   
+        {
+            "id": 4,
+            "question": "On your travels you find a legendary artefact that nobody has seen for centuries! Your first thought is...", "image":"/chest.png",
             "options": [
                 {"text": "I need to know how this works!", "character": "problemSolver"},
                 {"text": "I wonder what other secrets I can find!", "character": "explorer"},
@@ -30,23 +40,13 @@
             ]
         },
         {
-            "id": 4,
-            "question": "You've inherited a neglected piece of land. What excites you most?",
-            "options": [
-                {"text": "Unlock every secret, challenge and hidden reward", "character": "problemSolver"},
-                {"text": "Explore caves, forests, and places off the beaten path", "character": "explorer"},
-                {"text": "Transform it into something beautiful and thriving", "character": "builder"},
-                {"text": "Get to know the local community and build strong relationships", "character": "connector"}
-            ]
-        },        
-        {
             "id": 5,
-            "question": "You reach the final boss battle. The kingdom needs you. What do you do?",
+            "question": "Almost there! You reach the guarded gates of the Myth Monster's lair. Your path is blocked by ancient guardians. What do you do?", "image":"/castle.png",
             "options": [
-                {"text": "Study the boss' patterns and uncover its weaknesses", "character": "problemSolver"},
-                {"text": "Explore the area looking for hidden paths", "character": "explorer"},
-                {"text": "Craft a weapon to gain an advantage", "character": "builder"},
-                {"text": "Rally your team and lead everyone into victory", "character": "connector"}
+                {"text": "Study the guardians' attack patterns and uncover their weaknesses", "character": "problemSolver"},
+                {"text": "Search the surronding ruins for a way around", "character": "explorer"},
+                {"text": "Craft a tool that can break through the defenses", "character": "builder"},
+                {"text": "Rally your team and coordinate a plan to get everyone through", "character": "connector"}
             ]
         }
     ]

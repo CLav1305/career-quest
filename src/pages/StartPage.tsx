@@ -19,7 +19,7 @@ export function Start() {
           <button
             type="button"
             className="kongtext start-button"
-            onClick={() => navigate('/quiz')}
+            onClick={() => navigate('/info')}
           >
             START
           </button>

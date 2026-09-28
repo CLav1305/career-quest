@@ -1,10 +1,10 @@
 .quiz-card {
   max-width: 900px;
-  margin: 24px auto;
-  padding: 30px 28px 26px;
+  margin: 18px auto;
+  padding: 22px 18px 18px;
   border: 4px solid #3a2d1d;
   border-radius: 22px;
-  box-shadow: 0 10px 0 #3a2d1d;
+  box-shadow: 0 8px 0 #3a2d1d;
   background: linear-gradient(180deg, #f1e3ff 0%, #e0caff 100%);
 }
 
@@ -48,29 +48,61 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
 
 .quiz-button {
   width: min(100%, 210px);
-  min-height: 160px;
+  min-height: 140px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
   border: 3px solid #3a2d1d;
-  border-radius: 18px;
-  padding: 18px 16px;
+  border-radius: 16px;
+  padding: 12px 10px;
   background: rgba(255, 255, 255, 0.9);
   color: #2d241b;
-  font-size: 1rem;
+  font-size: 0.985rem;
   font-weight: 700;
   text-align: center;
   cursor: pointer;
   box-shadow: 0 6px 0 #3a2d1d;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+}
+
+.quiz-option__img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  display: block;
+  margin: 0 auto;
+}
+
+.quiz-option__text { display:block; }
+
+.quiz-option__img-wrap {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quiz-main-image-wrap {
+  display: grid;
+  place-items: center;
+  margin: 10px 0 14px;
+}
+
+.quiz-main-image {
+  width: min(150px, 74%);
+  height: auto;
+  image-rendering: pixelated;
+  border-radius: 10px;
 }
 
 @media (max-width: 768px) {
   .quiz-card {
-    margin: 16px 12px;
-    padding: 22px 16px 18px;
+    margin: 12px 10px;
+    padding: 16px 12px 14px;
     border-width: 3px;
     box-shadow: 0 7px 0 #3a2d1d;
   }
@@ -91,9 +123,9 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .quiz-button {
-    min-height: 130px;
-    padding: 14px 12px;
-    font-size: 0.9rem;
+    min-height: 120px;
+    padding: 10px 10px;
+    font-size: 0.92rem;
   }
 }
 
@@ -103,7 +135,7 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .quiz-button {
-    min-height: 110px;
+    min-height: 100px;
   }
 }
 
