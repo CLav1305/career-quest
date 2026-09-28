@@ -11,12 +11,12 @@
         },
         {
             "id": 2,
-            "question": "At the start of your adventure, you've inherited a neglected piece of land. What excites you most?", "image":"/house.png",
+            "question": "At the start of your adventure, you've inherited a neglected piece of land. What excites you most?", "image":"/land.png",
             "options": [
-                {"text": "Unlock every secret, challenge and hidden reward", "character": "problemSolver"},
-                {"text": "Explore caves, forests, and places off the beaten path", "character": "explorer"},
-                {"text": "Transform it into something beautiful and thriving", "character": "builder"},
-                {"text": "Get to know the local community and build strong connections", "character": "connector"}
+                {"text": "Unlocking every secret, challenge and hidden reward", "character": "problemSolver"},
+                {"text": "Exploring caves, forests, and places off the beaten path", "character": "explorer"},
+                {"text": "Transforming it into something beautiful and thriving", "character": "builder"},
+                {"text": "Getting to know the local community and building strong connections", "character": "connector"}
             ]
         },     
         {
@@ -26,7 +26,7 @@
                 {"text": "The inventory. I'm collecting everything", "character": "problemSolver", "image": "/bag.png"},
                 {"text": "The map fog. I'm exploring everything", "character": "explorer", "image": "/map.png"},
                 {"text": "The starter house. I'm building a mansion", "character": "builder","image": "/house.png"},
-                {"text": "The original storyline. It's about to become very dramatic", "character": "connector","image": "/scroll.png"}
+                {"text": "The original storyline. Things are about to become very dramatic", "character": "connector","image": "/scroll.png"}
                 ]
         },   
         {

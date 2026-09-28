@@ -7,9 +7,11 @@ export function Quiz ({ question, questionImage, options, onAnswerSelected, them
     <div className={`quiz-card quiz-card--theme-${theme}`}>
       <h2 className="quiz-title kongtext">{question}</h2>
       {questionImage && (
-        <div className="quiz-main-image-wrap">
-          <img src={questionImage} alt="" className="quiz-main-image" />
-        </div>
+        <div
+          className="quiz-main-image-wrap"
+          style={{ backgroundImage: `url(${questionImage})` }}
+          aria-label="Question background"
+        />
       )}
 
       <ul className={`quiz-options ${options.length === 2 ? 'quiz-options--two' : ''}`} id="quiz-options" role="listbox" aria-label="Quiz options">

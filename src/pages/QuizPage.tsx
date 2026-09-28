@@ -82,10 +82,12 @@ export function QuizPage() {
 
   return (
     <main className="quiz-page">
-      <p className="question-counter kongtext">
-      <h2 className="quiz-title-type kongtext">Personality Questions</h2>
-        Question {currentQuestionIndex + 1} of {questions.length}
-      </p>
+      <div className="quiz-header">
+        <h2 className="quiz-title-type kongtext">Personality Questions</h2>
+        <p className="question-counter kongtext">
+          Question {currentQuestionIndex + 1} of {questions.length}
+        </p>
+      </div>
       <Quiz
         question={currentQuestion.question}
         questionImage={(currentQuestion as any).image}

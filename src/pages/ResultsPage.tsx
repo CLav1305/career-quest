@@ -20,7 +20,7 @@ const resultKeyToName: Record<string, string> = {
 export function Results() {
   const [searchParams] = useSearchParams()
   const [result, setResult] = useState('builder')
-  const [answers, setAnswers] = useState<Array<{ question: string; choice: string; character: string }>>([])
+  const [, setAnswers] = useState<Array<{ question: string; choice: string; character: string }>>([])
   const [isLoading, setIsLoading] = useState(searchParams.get('loading') === 'true')
 
   useEffect(() => {
