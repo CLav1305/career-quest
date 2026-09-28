@@ -9,6 +9,7 @@ export function BossBattle() {
     <main className="boss-page">
       <div className="boss-card">
         <p className="boss-label kongtext">Final Boss Battle</p>
+        <Pixel size={6}>
         <div className="boss-arena">
           <div className="boss-graphic" role="img" aria-label="Myth Monster">
           <div className="monster monster-helmet">
@@ -39,6 +40,7 @@ export function BossBattle() {
           </div>
           <div className="boss-background" />
         </div>
+        </Pixel>
         <h1 className="boss-title kongtext">The Myth Monster Awakens</h1>
         <p className="boss-copy kongtext">
           Your journey through the realm has summoned the ancient creature of legend.

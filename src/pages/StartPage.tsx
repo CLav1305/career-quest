@@ -8,18 +8,18 @@ export function Start() {
 
   return (
     <main className="start-page">
+      <div className="stars" aria-hidden="true">
+      </div>
+
       <div className="start-card">
         <h1 className="kongtext start-title">Career Quest</h1>
-        <br />
-        <p className="kongtext">
-          Discover your career character!
-        </p>
-        <br />
+        <p className="kongtext start-subtitle">Discover your career character!</p>
+
         <Pixel size={5}>
           <button
             type="button"
             className="kongtext start-button"
-            onClick={() => navigate('/quiz')}
+            onClick={() => navigate('/info')}
           >
             START
           </button>

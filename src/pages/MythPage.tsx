@@ -81,13 +81,13 @@ export function Myths() {
   }
 
   if (!currentQuestion) {
-    return <p>Loading myths...</p>
+    return <p className="loading-myth kongtext">Loading myths...</p>
   }
 
   return (
     <div className="myth-page">
       <h1 className="myth-title kongtext">Myth Check</h1>
-      <p className="question-counter">
+      <p className="question-counter kongtext">
         Question {currentQuestionIndex + 1} of {mythQuestions.length}
       </p>
 
@@ -104,9 +104,9 @@ export function Myths() {
               ? ' That was the right answer.'
               : ` The correct answer was ${feedback.correctAnswer ? 'True' : 'False'}.`}
           </p>
-          <Pixel>
+          <Pixel size={4}>
           <button type="button" className="feedback-button kongtext" onClick={handleNext}>
-            {currentQuestionIndex === mythQuestions.length - 1 ? 'See Results' : 'Next Question'}
+            {currentQuestionIndex === mythQuestions.length - 1 ? 'RESULTS' : 'NEXT'}
           </button>
           </Pixel>
         </div>
