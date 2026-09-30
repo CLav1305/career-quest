@@ -13,7 +13,7 @@
   background-attachment: scroll;
   /* fallback background color in case the image doesn't cover or fails to load */
   background-color: var(--pixel-purple);
-  --pixel-purple: #381f8c;
+  --pixel-purple: #3E308B;
   --pixel-rosy-pink: #c5979d;
   --pixel-pink: #fc466b;
   --pixel-cyan: #4b8f8c;
@@ -58,10 +58,10 @@ body {
   background-image:
     linear-gradient(180deg, rgba(43,39,54,0.45), rgba(26,18,38,0.6)),
     url('/career-quest/start-bg.png');
-  background-size: 100%;
-  background-position: center top;
-  background-attachment: scroll;
-  background-repeat: repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   background-blend-mode: overlay;
 }
 

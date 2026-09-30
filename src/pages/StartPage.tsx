@@ -8,9 +8,6 @@ export function Start() {
 
   return (
     <main className="start-page">
-      <div className="stars" aria-hidden="true">
-      </div>
-
       <div className="start-card">
         <h1 className="kongtext start-title">Career Quest</h1>
         <p className="kongtext start-subtitle">Discover your career character!</p>

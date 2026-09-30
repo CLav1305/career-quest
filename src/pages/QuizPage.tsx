@@ -88,6 +88,8 @@ export function QuizPage() {
           Question {currentQuestionIndex + 1} of {questions.length}
         </p>
       </div>
+      <div style={{ height: '1rem' }} />
+      <div style={{ height: '1.5rem' }} />
       <Quiz
         question={currentQuestion.question}
         questionImage={(currentQuestion as any).image}
