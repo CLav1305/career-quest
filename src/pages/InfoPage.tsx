@@ -30,7 +30,10 @@ export function InfoPage() {
 
   return (
     <main className="info-page">
+      <div></div>
       <div className="info-card">
+        <div>
+        </div>
         <p className="kongtext info-message">
           The pixel world is loading you in. Several paths lie ahead, every choice you make from here shapes your journey. Time to choose...
         </p>

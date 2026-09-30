@@ -41,7 +41,7 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
-  justify-items: center;
+  justify-items: stretch;
   align-items: stretch;
   width: min(100%, 820px);
   font-family: "Kongtext", sans-serif;
@@ -57,6 +57,7 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
   width: 100%;
   display: flex;
   justify-content: center;
+  height: 100%;
 }
 
 #quiz-options {
@@ -66,6 +67,7 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
 .quiz-button {
   width: 100%;
   min-height: 118px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,6 +84,7 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
   cursor: pointer;
   box-shadow: 0 5px 0 #3a2d1d;
   transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+  align-self: stretch;
 }
 
 .quiz-option__img {
@@ -114,7 +117,7 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
 
 @media (max-width: 768px) {
   .quiz-card {
-    margin: 8px 8px;
+    margin: 8px auto;
     padding: 14px 10px 12px;
     border-width: 3px;
     box-shadow: 0 5px 0 #3a2d1d;
@@ -124,6 +127,7 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
     margin-bottom: 14px;
     font-size: 1rem;
     color:#0f0f0f;
+    line-height: 1.25;
   }
 
   .quiz-title-type{
@@ -134,12 +138,20 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
   .quiz-options {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
+    justify-items: stretch;
+    width: 100%;
+  }
+
+  .quiz-option {
+    width: 100%;
   }
 
   .quiz-button {
     min-height: 104px;
+    height: 100%;
     padding: 8px 7px;
     font-size: 0.72rem;
+    width: 100%;
   }
 
   .quiz-main-image-wrap {
@@ -160,11 +172,20 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
   .quiz-options {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
+    justify-items: stretch;
+    width: 100%;
   }
 
   .quiz-button {
     min-height: 90px;
+    height: 100%;
     width: 100%;
+    padding: 8px 6px;
+    line-height: 1.2;
+  }
+
+  .quiz-option__text {
+    line-height: 1.15;
   }
 
   .quiz-main-image-wrap {
