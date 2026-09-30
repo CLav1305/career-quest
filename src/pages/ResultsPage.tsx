@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import CharacterCard from '../components/CharacterCard'
 import charactersData from '../data/characters.json'
+import { resolveAssetUrl } from '../utils/assetUrl'
 
 const resultLabels: Record<string, string> = {
   connector: 'Connector',
@@ -85,7 +86,7 @@ export function Results() {
 
   const characterForCard = {
     ...matched,
-    icon: <img src={`${import.meta.env.BASE_URL}${characterIcons[matched.name]}`} alt="" />,
+    icon: <img src={resolveAssetUrl(characterIcons[matched.name])} alt="" />,
   }
 
   // Debug: log what we resolved so it's easy to inspect in the browser console
