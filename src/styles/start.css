@@ -1,0 +1,54 @@
+.start-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  color: #814ee8;
+  background: transparent;
+}
+
+.start-card {
+  text-align: center;
+}
+
+.start-title {
+  margin: 0 0 18px;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 700;
+  color: #c3b3ff; /* adapted from chosen palette */
+  text-shadow: 3px 3px 0 #150f2a;
+  letter-spacing: 1px;
+}
+
+.start-subtitle {
+  margin: 0 0 28px;
+  font-size: clamp(1.15rem, 2vw, 1.6rem);
+  color: #efe7ff;
+}
+
+.start-button {
+  font-size: clamp(1.5rem, 2vw, 2.2rem);
+  font-weight: 700;
+  color: #20102a;
+  background: linear-gradient(135deg, #ffc8f0, #ffd6b3); /* keep accent colors */
+  border: 3px solid #23102e;
+  border-radius: 9999px;
+  padding: 0.9rem 2.4rem;
+  box-shadow: 0 8px 0 #23102e;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.start-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 0 #23102e;
+}
+
+.start-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 0 #23102e;
+}
+
+@media (max-width: 640px) {
+  .start-title { font-size: clamp(2rem, 8vw, 3.6rem); }
+}

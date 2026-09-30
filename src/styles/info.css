@@ -1,0 +1,105 @@
+/* Themed info styles — fits the pixel festival color palette in index.css */
+
+:root {
+	/* local overrides (kept small) */
+	--info-width: min(720px, 94%);
+}
+
+.info-page {
+	min-height: 100vh;
+	display: grid;
+	place-items: start;
+	padding: 36px 18px;
+	color: var(--pixel-cream);
+}
+
+.info-card {
+	width: var(--info-width);
+	margin: 18px auto;
+	background: linear-gradient(180deg, rgba(15,12,30,0.82), rgba(22,14,40,0.78));
+	border: 6px solid var(--pixel-purple);
+	border-radius: 14px;
+	box-shadow: 0 12px 0 rgba(8,6,20,0.6), 0 0 0 6px rgba(124,58,237,0.06) inset;
+	padding: 22px;
+	font-family: "Kongtext", sans-serif;
+}
+
+.info-card h1,
+.info-card h2 {
+	margin: 0 0 8px;
+	color: var(--pixel-cream);
+	letter-spacing: 0.02em;
+}
+
+.info-card p {
+	margin: 0 0 12px;
+	color: var(--muted);
+}
+
+.info-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 12px;
+}
+
+.info-attr {
+	background: linear-gradient(135deg, rgba(56,31,140,0.06), rgba(197,151,157,0.04));
+	border: 3px solid rgba(255,255,255,0.03);
+	border-radius: 10px;
+	padding: 12px;
+	min-height: 72px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.info-attr .label {
+	font-weight: 800;
+	color: var(--pixel-purple);
+	font-size: 0.85rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+.info-attr .value {
+	font-size: 1.05rem;
+	margin-top: 6px;
+	color: var(--pixel-cream);
+}
+
+.info-callout {
+	margin-top: 14px;
+	padding: 12px 14px;
+	border-radius: 10px;
+	background: linear-gradient(90deg, rgba(56,31,140,0.12), rgba(124,58,237,0.06));
+	border: 2px dashed rgba(124,58,237,0.08);
+	color: var(--pixel-cream);
+}
+
+.info-actions {
+	display:flex;
+	gap:12px;
+	justify-content:flex-end;
+	margin-top: 12px;
+}
+
+.pixel-btn {
+	display:inline-block;
+	border-radius: 9999px;
+	background: linear-gradient(90deg, var(--pixel-pink), var(--pixel-purple));
+	color: var(--white);
+	padding: 10px 16px;
+	font-weight: 800;
+	border: 3px solid rgba(0,0,0,0.35);
+	box-shadow: 0 8px 0 rgba(8,6,20,0.6);
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.pixel-btn:active { transform: translateY(2px); box-shadow: 0 2px 0 rgba(8,6,20,0.6); }
+
+@media (max-width:600px){
+	.info-card { padding: 16px; }
+	.info-actions { justify-content: center; }
+}
+

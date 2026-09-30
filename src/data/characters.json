@@ -5,25 +5,22 @@
 		"tagline": "You see a challenge and think: let's make something better.",
 		"description": "You are at your best when an idea can become something real. Builders turn curiosity into prototypes, systems, and solutions that make everyday life work better.",
 		"traits": ["Hands-on", "Persistent", "Resourceful"],
-		"careers": ["Engineering", "Product design", "Robotics"],
 		"accent": "#0c8f83"
 	},
 	{
-		"name": "Analyst",
+		"name": "Problem Solver",
 		"title": "The thoughtful investigator",
 		"tagline": "You ask the smart questions that help everyone move forward.",
 		"description": "You notice patterns, look closer, and turn information into insight. Analysts make complex problems clearer so teams can make confident decisions.",
 		"traits": ["Curious", "Precise", "Logical"],
-		"careers": ["Data science", "Cybersecurity", "Research"],
 		"accent": "#4868a8"
 	},
 	{
-		"name": "Innovator",
+		"name": "Explorer",
 		"title": "The possibility-maker",
 		"tagline": "You wonder what could be possible, then go find out.",
 		"description": "You connect unexpected ideas and imagine new ways forward. Innovators use technology as a creative material for solving problems that do not have a playbook yet.",
 		"traits": ["Imaginative", "Brave", "Experimental"],
-		"careers": ["Software development", "AI and machine learning", "UX design"],
 		"accent": "#d46a4a"
 	},
 	{
@@ -32,7 +29,6 @@
 		"tagline": "You bring the right people and ideas into the same room.",
 		"description": "You make collaboration feel possible. Connectors understand people, translate across teams, and use technology to create more welcoming experiences.",
 		"traits": ["Empathetic", "Collaborative", "Communicative"],
-		"careers": ["Technical program management", "Product management", "Human-computer interaction"],
 		"accent": "#9b587d"
 	}
 ]

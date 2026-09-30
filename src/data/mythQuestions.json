@@ -1,0 +1,28 @@
+{
+    "mythsQuestions": [
+        {
+            "question": "You have to be a coding wizard before you are allowed to start learning.",
+            "correctAnswer": false,
+            "options": [
+                { "text": "True", "value": true },
+                { "text": "False", "value": false }
+            ]
+        },
+        {
+            "question": "Power grows when you keep trying, asking questions, and building new skills.",
+            "correctAnswer": true,
+            "options": [
+                { "text": "True", "value": true },
+                { "text": "False", "value": false }
+            ]
+        },
+        {
+            "question": "Even a small side quest—a project, course, or internship—can help you reach your career path.",
+            "correctAnswer": true,
+            "options": [
+                { "text": "True", "value": true },
+                { "text": "False", "value": false }
+            ]
+        }
+    ]
+}
