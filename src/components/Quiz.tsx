@@ -9,7 +9,7 @@ export function Quiz ({ question, questionImage, options, onAnswerSelected, them
       {questionImage && (
         <div
           className="quiz-main-image-wrap"
-          style={{ backgroundImage: `url(${questionImage})` }}
+          style={{ backgroundImage: `url(${import.meta.env.BASE_URL}${questionImage.replace(/^\/+/, '')})` }}
           aria-label="Question background"
         />
       )}
@@ -25,7 +25,7 @@ export function Quiz ({ question, questionImage, options, onAnswerSelected, them
             >
               {option.image && (
                 <div className="quiz-option__img-wrap">
-                  <img src={option.image} alt="" className="quiz-option__img" />
+                  <img src={`${import.meta.env.BASE_URL}${option.image.replace(/^\/+/, '')}`} alt="" className="quiz-option__img" />
                 </div>
               )}
               <span className="quiz-option__text">{option.text}</span>

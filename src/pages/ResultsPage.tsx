@@ -17,6 +17,13 @@ const resultKeyToName: Record<string, string> = {
   problemSolver: 'Problem Solver',
 }
 
+const characterIcons: Record<string, string> = {
+  Builder: '/hammer.png',
+  'Problem Solver': '/book.png',
+  Explorer: '/tree.png',
+  Connector: '/heart.png',
+}
+
 export function Results() {
   const [searchParams] = useSearchParams()
   const [result, setResult] = useState('builder')
@@ -76,9 +83,10 @@ export function Results() {
   const characters: Array<any> = charactersData as any
   const matched = characters.find((c) => c.name === targetName) ?? characters[0]
 
-  // Build a simple icon using initials if no icon is provided
-  const initials = matched.name.split(' ').map((s: string) => s[0]).join('').slice(0, 2).toUpperCase()
-  const characterForCard = { ...matched, icon: <span>{initials}</span> }
+  const characterForCard = {
+    ...matched,
+    icon: <img src={`${import.meta.env.BASE_URL}${characterIcons[matched.name]}`} alt="" />,
+  }
 
   // Debug: log what we resolved so it's easy to inspect in the browser console
   // (remove these logs once you've confirmed the data is correct)
@@ -86,8 +94,8 @@ export function Results() {
   console.debug('Results resolved character', { result, targetName, matched, characterForCard, charactersLength: characters.length })
 
   return (
-    <div>
+    <main className="character-result">
       <CharacterCard character={characterForCard} />
-    </div>
+    </main>
   )
 }
