@@ -3,15 +3,15 @@
             "id": 1,
             "question": "You've assembled your team for your quest. Every team needs different player types. Which one are you?",
             "options": [
-                {"text": "The one checking the guides before the mission starts", "character": "problemSolver", "image": "/book.png"},
-                {"text": "The one wandering off to explore", "character": "explorer", "image": "/tree.png"},
-                {"text": "The one upgrading everything", "character": "builder", "image": "/hammer.png"},
-                {"text": "The one that makes sure no one gets left behind", "character": "connector", "image": "/heart.png"}
+                {"text": "The one checking the guides before the mission starts", "character": "problemSolver", "image": "/career-quest/book.png"},
+                {"text": "The one wandering off to explore", "character": "explorer", "image": "/career-quest/tree.png"},
+                {"text": "The one upgrading everything", "character": "builder", "image": "/career-quest/hammer.png"},
+                {"text": "The one that makes sure no one gets left behind", "character": "connector", "image": "/career-quest/heart.png"}
             ]
         },
         {
             "id": 2,
-            "question": "At the start of your adventure, you've inherited a neglected piece of land. What excites you most?", "image":"/land.png",
+            "question": "At the start of your adventure, you've inherited a neglected piece of land. What excites you most?", "image":"/career-quest/land.png",
             "options": [
                 {"text": "Unlocking every secret, challenge and hidden reward", "character": "problemSolver"},
                 {"text": "Exploring caves, forests, and places off the beaten path", "character": "explorer"},
@@ -26,12 +26,12 @@
                 {"text": "The inventory. I'm collecting everything", "character": "problemSolver", "image": "/bag.png"},
                 {"text": "The map fog. I'm exploring everything", "character": "explorer", "image": "/map.png"},
                 {"text": "The starter house. I'm building a mansion", "character": "builder","image": "/house.png"},
-                {"text": "The original storyline. Things are about to become very dramatic", "character": "connector","image": "/scroll.png"}
+                {"text": "The original storyline. Things are about to become very dramatic", "character": "connector","image": "/career-quest/scroll.png"}
                 ]
         },   
         {
             "id": 4,
-            "question": "On your travels you find a legendary artefact that nobody has seen for centuries! Your first thought is...", "image":"/chest.png",
+            "question": "On your travels you find a legendary artefact that nobody has seen for centuries! Your first thought is...", "image":"/career-quest/chest.png",
             "options": [
                 {"text": "I need to know how this works!", "character": "problemSolver"},
                 {"text": "I wonder what other secrets I can find!", "character": "explorer"},
@@ -41,7 +41,7 @@
         },
         {
             "id": 5,
-            "question": "Almost there! You reach the guarded gates of the Myth Monster's lair. Your path is blocked by ancient guardians. What do you do?", "image":"/castle.png",
+            "question": "Almost there! You reach the guarded gates of the Myth Monster's lair. Your path is blocked by ancient guardians. What do you do?", "image":"/career-quest/castle.png",
             "options": [
                 {"text": "Study the guardians' attack patterns and uncover their weaknesses", "character": "problemSolver"},
                 {"text": "Search the surronding ruins for a way around", "character": "explorer"},
