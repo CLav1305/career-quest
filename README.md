@@ -1,75 +1,78 @@
-# React + TypeScript + Vite
+# Career Quest
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A retro-styled personality quiz game built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+The app presents a series of fantasy-themed questions and matches the player to a character archetype such as explorer, problem solver, builder, or connector.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech stack
 
-## React Compiler
+- React
+- TypeScript
+- Vite
+- React Router
+- GitHub Pages deployment
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Local development
 
-## Expanding the ESLint configuration
+Install dependencies:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Run the app locally:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm run dev
 ```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## GitHub Pages deployment
+
+This project is configured for GitHub Pages using the repo URL:
+
+```text
+https://CLav1305.github.io/career-quest/
+```
+
+Deploy the app:
+
+```bash
+npm run deploy
+```
+
+This runs the production build and publishes the `dist` folder to the GitHub Pages branch.
+
+## Project structure
+
+```text
+src/
+  components/
+  data/
+  pages/
+  styles/
+  App.tsx
+  main.tsx
+  index.css
+```
+
+## Notes
+
+- The app uses a hash router for compatibility with static hosting.
+- Image paths are configured to work correctly with the GitHub Pages base URL.
+- The quiz content is stored in JSON data files under `src/data/`.
+
+## License
+
+This project is for educational and personal use unless otherwise specified by the repository owner.

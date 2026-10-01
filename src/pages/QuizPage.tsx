@@ -1,9 +1,10 @@
 import { useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Quiz } from '../components/Quiz'
-import type { QuizOption } from '../components/types/QuestionCharProps'
+import type { QuizOption, Question } from '../components/types/QuestionProps'
 import characterQuestionsData from '../data/characterQuestions.json'
 
+// Randomize the answer order so the quiz feels less repetitive each time.
 function shuffleOptions<T>(items: T[]) {
   const nextItems = [...items]
 
@@ -15,15 +16,11 @@ function shuffleOptions<T>(items: T[]) {
   return nextItems
 }
 
-type Question = {
-  id: number
-  question: string
-  options: QuizOption[]
-}
-
+// Pull the quiz content from JSON so question text and answers can be edited without changing logic.
 const questions = (characterQuestionsData as { characterQuestions: Question[] }).characterQuestions
 const themes: Array<1 | 2 | 3 | 4 | 5> = [1, 2, 3, 4, 5]
 
+// Determine the final personality result by picking the highest score.
 function getTopCharacter(scores: Record<string, number>) {
   return Object.entries(scores).sort((a, b) => b[1] - a[1])[0][0]
 }
@@ -45,6 +42,7 @@ export function QuizPage() {
     [currentQuestionIndex],
   )
 
+  // Record the answer and advance the quiz.
   const handleAnswer = (selectedOption: QuizOption) => {
     const characterKey = typeof selectedOption.character === 'string' ? selectedOption.character : 'unknown'
 
@@ -88,8 +86,11 @@ export function QuizPage() {
           Question {currentQuestionIndex + 1} of {questions.length}
         </p>
       </div>
+
+      {/* Spacing added to keep the layout consistent with the pixel-art card styling. */}
       <div style={{ height: '1rem' }} />
       <div style={{ height: '1.5rem' }} />
+
       <Quiz
         question={currentQuestion.question}
         questionImage={(currentQuestion as any).image}

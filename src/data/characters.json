@@ -19,7 +19,7 @@
 		"name": "Explorer",
 		"title": "The possibility-maker",
 		"tagline": "You wonder what could be possible, then go find out.",
-		"description": "You connect unexpected ideas and imagine new ways forward. Innovators use technology as a creative material for solving problems that do not have a playbook yet.",
+		"description": "You connect unexpected ideas and imagine new ways forward. Explorers use technology as a creative material for solving problems that do not have a playbook yet.",
 		"traits": ["Imaginative", "Brave", "Experimental"],
 		"accent": "#d46a4a"
 	},

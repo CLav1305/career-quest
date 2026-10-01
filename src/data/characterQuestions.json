@@ -11,7 +11,8 @@
         },
         {
             "id": 2,
-            "question": "At the start of your adventure, you've inherited a neglected piece of land. What excites you most?", "image":"/career-quest/land.png",
+            "question": "At the start of your adventure, you inherit a rundown plot of land. What excites you most?",
+            "image": "/career-quest/land.png",
             "options": [
                 {"text": "Unlocking every secret, challenge and hidden reward", "character": "problemSolver"},
                 {"text": "Exploring caves, forests, and places off the beaten path", "character": "explorer"},
@@ -31,7 +32,8 @@
         },   
         {
             "id": 4,
-            "question": "On your travels you find a legendary artefact that nobody has seen for centuries! Your first thought is...", "image":"/career-quest/chest.png",
+            "question": "While travelling, you uncover a legendary artefact that has been lost for centuries. What do you do next?",
+            "image": "/career-quest/chest.png",
             "options": [
                 {"text": "I need to know how this works!", "character": "problemSolver"},
                 {"text": "I wonder what other secrets I can find!", "character": "explorer"},

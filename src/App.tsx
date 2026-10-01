@@ -7,6 +7,7 @@ import { Results } from './pages/ResultsPage'
 import { InfoPage } from './pages/InfoPage'
 import './index.css'
 
+// Top-level route map for the quest flow.
 function App() {
   return (
     <Routes>
