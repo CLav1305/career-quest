@@ -1,20 +1,5 @@
-import type { ReactNode } from 'react'
 import '../styles/characterCard.css'
-
-export type Character = {
-	name: string
-	title: string
-	tagline: string
-	description: string
-	traits: string[]
-	careers: string[]
-	accent: string
-	icon: ReactNode
-}
-
-type CharacterCardProps = {
-	character: Character
-}
+import type { CharacterCardProps } from "./types/CharacterProps"
 
 function CharacterCard({ character }: CharacterCardProps) {
 	return (

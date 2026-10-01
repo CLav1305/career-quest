@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { Quiz } from '../components/Quiz'
 import mythQuestionsData from '../data/mythQuestions.json'
 import '../styles/myth.css'
+import type { MythQuestion } from '../components/types/MythProps'
 import { Pixel } from '@react-pixel-ui/react'
 
 function shuffleOptions<T>(items: T[]) {
@@ -16,16 +17,6 @@ function shuffleOptions<T>(items: T[]) {
   return nextItems
 }
 
-type MythOption = {
-  text: string
-  value: boolean
-}
-
-type MythQuestion = {
-  question: string
-  correctAnswer: boolean
-  options: MythOption[]
-}
 
 const mythQuestions = (mythQuestionsData as { mythsQuestions: MythQuestion[] }).mythsQuestions
 
@@ -90,7 +81,9 @@ export function Myths() {
       <p className="question-counter kongtext">
         Question {currentQuestionIndex + 1} of {mythQuestions.length}
       </p>
-
+      <div style={{ height: '1rem' }} />
+      <div style={{ height: '1.5rem' }} />
+      <div style={{ height: '1.5rem' }} />
       {feedback ? (
         <div className="feedback-card">
           <div className={`feedback-mark ${feedback.isCorrect ? 'correct' : 'wrong'}`}>
